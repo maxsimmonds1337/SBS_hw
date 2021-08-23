@@ -1,0 +1,12 @@
+(fp_lib_table
+  (lib (name _teo_capacitors)(type KiCad)(uri ${KIPRJMOD}/Kicad_Library_TEO/footprints/capacitors.pretty)(options "")(descr ""))
+  (lib (name _teo_connectors)(type KiCad)(uri ${KIPRJMOD}/Kicad_Library_TEO/footprints/connectors.pretty)(options "")(descr ""))
+  (lib (name _teo_crystals-oscillators)(type KiCad)(uri ${KIPRJMOD}/Kicad_Library_TEO/footprints/crystals-oscillators.pretty)(options "")(descr ""))
+  (lib (name _teo_diodes-rectifiers)(type KiCad)(uri ${KIPRJMOD}/Kicad_Library_TEO/footprints/diodes-rectifiers.pretty)(options "")(descr ""))
+  (lib (name _teo_relays-switches)(type KiCad)(uri ${KIPRJMOD}/Kicad_Library_TEO/footprints/relays-switches.pretty)(options "")(descr ""))
+  (lib (name _teo_miscellaneous)(type KiCad)(uri ${KIPRJMOD}/Kicad_Library_TEO/footprints/miscellaneous.pretty)(options "")(descr ""))
+  (lib (name _teo_modules)(type KiCad)(uri ${KIPRJMOD}/Kicad_Library_TEO/footprints/modules.pretty)(options "")(descr ""))
+  (lib (name _teo_semiconductors-smd)(type KiCad)(uri ${KIPRJMOD}/Kicad_Library_TEO/footprints/semiconductors-smd.pretty)(options "")(descr ""))
+  (lib (name _teo_inductors-transformers)(type KiCad)(uri ${KIPRJMOD}/Kicad_Library_TEO/footprints/inductors-transformers.pretty)(options "")(descr ""))
+  (lib (name _teo_resistors)(type KiCad)(uri ${KIPRJMOD}/Kicad_Library_TEO/footprints/resistors.pretty)(options "")(descr ""))
+)

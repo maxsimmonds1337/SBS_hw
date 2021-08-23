@@ -1,0 +1,3 @@
+[submodule "Kicad_Library_TEO"]
+	path = design/Kicad_Library_TEO
+	url = https://github.com/TheEngineeringOctopus/Kicad_Library_TEO.git
