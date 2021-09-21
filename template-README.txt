@@ -5,18 +5,18 @@ Instead follow these directions - https://help.github.com/en/github/creating-clo
 
 2) Open Git Bash. Create a bare clone of the template repository;
 
-git clone --bare https://github.com/optimiseddesign/optimised_kicad-template.git TEMP_optimised_kicad-template
+git clone --bare git@github.com:TheEngineeringOctopus/teo_kicad-template-master.git TEMP_TEO_kicad-template
 
 3) Mirror-push this bare clone to the new blank Github repository;
 
-cd TEMP_optimised_kicad-template
-git push --mirror https://github.com/optimiseddesign/ptxxxx_new-board-name.git
+cd TEMP_TEO_kicad-template
+git push --mirror git@github.com:TheEngineeringOctopus/TEOXXXX.git
 
 
 4) Remove the temporary local repository you created earlier;
 
 cd ..
-rm -rf TEMP_optimised_kicad-template
+rm -rf TEMP_TEO_kicad-template
 
 5) Then clone the new templated PCB design as normal from Github!
 
