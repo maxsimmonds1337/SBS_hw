@@ -1,3 +1,3 @@
-[submodule "design/Kicad_Library_TEO"]
-	path = design/Kicad_Library_TEO
-	url = git@github.com:TheEngineeringOctopus/Kicad_Library_TEO.git
+[submodule "design/Kicad_Library"]
+	path = design/Kicad_Library
+	url = git@github.com:maxsimmonds1337/Kicad_Library.git
