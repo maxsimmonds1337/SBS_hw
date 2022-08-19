@@ -16,4 +16,5 @@
   (lib (name _teo_relays-switches)(type Legacy)(uri ${KIPRJMOD}/Kicad_Library_TEO/symbols/relays-switches.lib)(options "")(descr ""))
   (lib (name _teo_resistors)(type Legacy)(uri ${KIPRJMOD}/Kicad_Library_TEO/symbols/resistors.lib)(options "")(descr ""))
   (lib (name _teo_transistors)(type Legacy)(uri ${KIPRJMOD}/Kicad_Library_TEO/symbols/transistors.lib)(options "")(descr ""))
+  (lib (name SBS_hw-rescue)(type Legacy)(uri ${KIPRJMOD}/SBS_hw-rescue.lib)(options "")(descr ""))
 )

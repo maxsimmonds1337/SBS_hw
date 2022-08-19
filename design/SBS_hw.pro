@@ -1,4 +1,4 @@
-update=04/05/2020 16:03:35
+update=Tue 02 Aug 2022 23:00:27 BST
 version=1
 last_client=kicad
 [general]
@@ -12,16 +12,6 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
-[schematic_editor]
-version=1
-PageLayoutDescrFile=optimised_kicad-libraries/environment/OptimisedPD_Titleblock.kicad_wks
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=optimised_kicad-libraries/environment/OptimisedPD_Titleblock.kicad_wks
@@ -258,3 +248,13 @@ uViaDrill=0.1
 dPairWidth=0.25
 dPairGap=0.25
 dPairViaGap=0.25
+[schematic_editor]
+version=1
+PageLayoutDescrFile=Kicad_Library/environment/TEO_Titleblock.kicad_wks
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1

@@ -1,27 +1,24 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Mechanical_MountingHole_Pad
+# GND-power
 #
-DEF Mechanical_MountingHole_Pad H 0 40 N N 1 F N
-F0 "H" 0 250 50 H V C CNN
-F1 "Mechanical_MountingHole_Pad" 0 175 50 H V C CNN
+DEF GND-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "GND-power" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
-$FPLIST
- MountingHole*Pad*
-$ENDFPLIST
 DRAW
-C 0 50 50 0 1 50 N
-X 1 1 0 -100 100 U 50 50 1 1 I
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# _kb_miscellaneous_Logo
+# Logo-_kb_miscellaneous
 #
-DEF _kb_miscellaneous_Logo LOGO 0 50 Y Y 1 F N
+DEF Logo-_kb_miscellaneous LOGO 0 50 Y Y 1 F N
 F0 "LOGO" 200 50 50 H V C CNN
-F1 "_kb_miscellaneous_Logo" 200 -50 50 H V C CNN
+F1 "Logo-_kb_miscellaneous" 200 -50 50 H V C CNN
 F2 "" -145 0 50 H I C CNN
 F3 "" -145 0 50 H I C CNN
 F4 "PCB Logo Virtual Part" -100 50 50 H I C CNN "Description"
@@ -39,16 +36,19 @@ S -50 -50 50 50 0 1 0 f
 ENDDRAW
 ENDDEF
 #
-# power_GND
+# MountingHole_Pad-Mechanical
 #
-DEF power_GND #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power_GND" 0 -150 50 H V C CNN
+DEF MountingHole_Pad-Mechanical H 0 40 N N 1 F N
+F0 "H" 0 250 50 H V C CNN
+F1 "MountingHole_Pad-Mechanical" 0 175 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
+$FPLIST
+ MountingHole*Pad*
+$ENDFPLIST
 DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
+C 0 50 50 0 1 50 N
+X 1 1 0 -100 100 U 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
