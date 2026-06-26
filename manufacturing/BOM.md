@@ -14,7 +14,7 @@
 | **F3** | **Bulk cap rating:** C6 is 100µF / 63V — insufficient for 58.8V (derating rule requires ≥80V, prefer 100V). Replace before layout. | Hard block on layout |
 | **F4** | **DRV8301 package mismatch:** Schematic footprint is PVQFN-40 (DRV8301DCPR), but only the HTSSOP-56 variant (DRV8301DCAR, C98969) is currently stocked on LCSC. Decide: update footprint to HTSSOP-56 and use C98969, OR source DRV8301DCPR from Mouser/Digikey. | Must resolve before BOM lock |
 | **F5** | **BMI160 missing from schematic:** All sheets searched — BMI160 (balance IMU) is not placed. VESC Balance App requires it. Must be added to MCU sheet (I2C: SDA→PB7, SCL→PB6; INT→MCU GPIO). LCSC: C94021. | Hard block on function |
-| **F6** | **MC74VHC1GT66 not stocked on LCSC:** Could not confirm a direct listing. Search LCSC for "74VHC1G66" — if not found, substitute SN74LVC1G66DBVR (TI, SOT-23-5; same function, pin-compatible). | Confirm before ordering |
+| ~~**F6**~~ | ~~MC74VHC1GT66 not stocked on LCSC~~ — **Resolved:** use SN74LVC1G66DCKR (C113518), SC-70-5 package, pin + footprint compatible. | ✅ Resolved |
 
 ---
 
@@ -31,7 +31,7 @@
 | U (LDO) | TC2117-3.3VDBTR — 3.3V 800mA LDO | **C98655** | SOT-223-3 | 1 | ~£0.31 | Powers 3.3V logic rail from DRV8301 5V buck |
 | U (BMI160) | BMI160 — 6-axis IMU | **C94021** | LGA-14 | 1 | ~£2.67 | ⚠️ F5: NOT IN SCHEMATIC — must be added. Required for Balance App. |
 | U (NRF) | EYSGJNZWY — Taiyo Yuden NRF51822 module | **C2151959** | SMD-28 | 1 | ~£3.62 | Same as VESC 6 MK5 reference. EOL risk noted (see vesc_firmware_notes.md §4) |
-| U3 | MC74VHC1GT66 — single analog switch | **⚠️ Search LCSC** | SC-88A/SOT-353 | 1 | ~£0.05 | ⚠️ F6: search "74VHC1G66". If unavailable, substitute SN74LVC1G66DBVR (search LCSC for "SN74LVC1G66DBVR") |
+| U2, U3, U4 | SN74LVC1G66DCKR — single SPST analog switch (sub for MC74VHC1GT66) | **C113518** | SC-70-5 (= SOT-353) | 3 | ~£0.02 ea | F6 resolved. TI LVC1G66, pin + footprint compatible with MC74VHC1GT66 SC-88A. Same function, 1.65–5.5V supply. |
 
 ### Power Stage — MOSFETs (Critical Replacement)
 
@@ -148,7 +148,7 @@ Before placing an LCSC order, confirm the following:
 - [ ] **F3 resolved** — Bulk cap 100µF/100V part selected and added to BOM
 - [ ] **F4 resolved** — DRV8301 package decision: update footprint to HTSSOP-56 (use C98969) OR source DCPR from Mouser
 - [ ] **F5 resolved** — BMI160 added to schematic MCU sheet, LCSC C94021 added to BOM
-- [ ] **F6 resolved** — MC74VHC1GT66 / SN74LVC1G66 confirmed in stock
+- [x] **F6 resolved** — SN74LVC1G66DCKR (C113518) confirmed, SC-70-5 footprint compatible
 - [ ] Exact passive quantities verified by running a BOM export from KiCad
 - [ ] Footprints for all replaced parts updated in schematic before PCB layout
 - [ ] 4.7µF bootstrap caps confirmed as 100V-rated in schematic
