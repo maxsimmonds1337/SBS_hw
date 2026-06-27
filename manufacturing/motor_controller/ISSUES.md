@@ -16,10 +16,10 @@ Status: `[OPEN]` / `[IN PROGRESS]` / `[RESOLVED]`
 - Verify pin 1/2/3 assignment in the KiCad footprint matches D2PAK physical pinout (Gate=1, Drain tab=2, Source=3)
 - PCB layout: each MOSFET needs ≥ 50 cm² copper pour on the tab pad. Tight half-bridge loop (< 1 cm²) to keep L_stray < 30 nH.
 
-### MC-002 Bootstrap Diodes Missing/Wrong [OPEN]
-- BST_A: PMEG6020ER (20V) — must be replaced with DSS210 (100V, LCSC C511868)
-- BST_B: **MISSING** — must be added to DRV8301.kicad_sch
-- BST_C: **MISSING** — must be added to DRV8301.kicad_sch
+### MC-002 Bootstrap Diodes Missing/Wrong [PARTIALLY RESOLVED]
+- BST_A: ~~PMEG6020ER (20V)~~ → DSS210 (100V) set in DRV8301.kicad_sch 2026-06-27. Footprint: `Diode_SMD:D_SOD-123F`.
+- BST_B: **STILL MISSING** — must be added to DRV8301.kicad_sch in KiCad (requires placement)
+- BST_C: **STILL MISSING** — must be added to DRV8301.kicad_sch in KiCad (requires placement)
 
 Cathode of each diode → BST_x pin (DRV8301 pins 48/38/49 for A/B/C). Anode → VBOOST (+5V from DRV8301 buck). See `../parts/Infineon/DSS210/DSS210.md`.
 
@@ -31,11 +31,8 @@ At 14S (58.8 V), the bus capacitors must be rated ≥ 100 V. Add to Power sheet 
 - Suggestion: EEEHB2A471P (Panasonic, 470 µF, 100 V, radial, LCSC C131403)
 - Place as close as possible to the SUPPLY bus connector pads
 
-### MC-004 DRV8301 Footprint Override Not Applied [OPEN]
-Symbol `3_Phase_BLDC_Driver_56_Pin_HTSSOP_DRV8301` is HTSSOP-56 but the placed instance footprint is not yet overridden. Must be set to:
-`Package_SO:Texas_HTSSOP-56_6.1x9.7mm_P0.65mm`
-
-Do this in KiCad: right-click DRV8301 → Properties → Footprint.
+### MC-004 DRV8301 Footprint Override Not Applied [RESOLVED 2026-06-27]
+~~Footprint was blank.~~ Set to `Package_SO:Texas_HTSSOP-56_6.1x9.7mm_P0.65mm` via text edit.
 
 ---
 
@@ -44,18 +41,14 @@ Do this in KiCad: right-click DRV8301 → Properties → Footprint.
 ### MC-005 Schematic Unannotated [OPEN]
 All component references are `C?`, `R?`, `Q?`, `U?`. Run **Tools → Annotate Schematic** in KiCad before generating BOM or sending for fab. Current netlist and BOM reflect unannotated refs (functionally correct but confusing).
 
-### MC-006 TC2117 Value Field Blank [OPEN]
-U1 (3.3V LDO) has Value = `~`. Set to `TC2117-3.3VDBTR`. Also set:
-- Footprint: `Package_TO_SOT_SMD:SOT-223-3_TabPin2`
-- LCSC: `C98655`
+### MC-006 TC2117 Value Field Blank [RESOLVED 2026-06-27]
+~~U1 Value = `~`.~~ Set Value=`TC2117-3.3VDBTR`, Footprint=`SOT-223-3_TabPin2`. LCSC C98655 still needs to be set as a property in KiCad.
 
 ### MC-007 Crystal No Frequency Value [RESOLVED 2026-06-27]
 ~~Y? on MCU sheet has no frequency in the Value field.~~ Fixed: Value set to `8MHz`, footprint set to `Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm` (matches LCSC C5181477 SOSET 8MHz 20pF 10ppm, per BOM.md).
 
-### MC-008 Q2 (SENS_SUPPLY) No Part Assigned [OPEN]
-Q2 is a generic `Q_NMOS_GSD` symbol with no Value or LCSC part. Assign:
-- BSS138 (SOT-23, N-channel, Vds=50V, LCSC C112739) — adequate for SENS_SUPPLY < 5V switching
-- Or 2N7002 (SOT-23, LCSC C8545)
+### MC-008 Q2 (SENS_SUPPLY) No Part Assigned [RESOLVED 2026-06-27]
+~~Q2 had generic symbol with no part.~~ Set Value=`BSS138`, Footprint=`SOT-23`. LCSC C112739 still needs to be set as a property.
 
 ### MC-009 DRV8301 PVDD Margin [OPEN]
 PVDD_max = 60V. At 14S (58.8V): 1.2V headroom.
@@ -86,13 +79,11 @@ Direct-read analysis of MCU.kicad_sch (2026-06-27) found:
 2. Fix BOOT0 (y=133.35): either tie directly to GND, or add a 10kΩ pull-down to GND (pull-down preferred — allows DFU entry via BOOT0 high).
 3. Remove the GND direct-tie from the PC13 GPIO pin once the label is moved.
 
-### MC-014 U2/U3/U4 Symbol Reverted in KiCad [OPEN]
-In session 2026-06-26, DRV8301.kicad_sch was edited to change U2/U3/U4 from MC74VHC1GT66 to SN74LVC1G66DCKR (C113518). The user's subsequent KiCad save reverted these changes. With KiCad closed, re-apply:
-- lib_id: `"74xGxx:74LVC1G66"`
-- Value: `"SN74LVC1G66DCKR"`
-- Footprint: `"Package_TO_SOT_SMD:SOT-353_SC-70-5"`
-  
-Same update needed for U8/U9/U10 on Power.kicad_sch.
+### MC-014 U2/U3/U4 Symbol Update [PARTIALLY RESOLVED 2026-06-27]
+U2/U3/U4 Value set to `SN74LVC1G66DCKR` and Footprint set to `SOT-353_SC-70-5`.
+lib_id NOT changed (stays as `Analog_Switch:MC74VHC1GT66`) — the MC74VHC1GT66 and SN74LVC1G66 have identical pinout in SOT-353/SC-70-5, so the symbol is functionally compatible. Changing lib_id in a text editor risks breaking wiring; do this in KiCad if the custom 74xGxx library is available.
+
+Still needed: U8/U9/U10 on Power.kicad_sch need same Value/Footprint update.
 
 ### MC-015 VDDA (Pin 13) Not Connected [OPEN]
 Direct-read analysis (2026-06-27): VDDA (STM32 pin 13, abs position (163.195, 143.51)) has no wire connection. All other bottom-side VDD pins (19, 32, 48, 64) have decoupling caps to GND, but VDDA has nothing.

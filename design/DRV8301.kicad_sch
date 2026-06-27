@@ -6522,7 +6522,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
 			(at 247.3452 148.59 0)
 			(effects
 				(font
@@ -6725,7 +6725,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 152.4 165.1 0)
 			(effects
 				(font
@@ -7329,7 +7329,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 109.855 157.48 0)
 			(effects
 				(font
@@ -7999,7 +7999,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_1008_2520Metric"
 			(at 192.532 71.12 0)
 			(effects
 				(font
@@ -8272,7 +8272,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 64.135 154.305 0)
 			(effects
 				(font
@@ -8399,7 +8399,7 @@
 				)
 			)
 		)
-		(property "Value" "MC74VHC1GT66"
+		(property "Value" "SN74LVC1G66DCKR"
 			(at 109.22 171.45 0)
 			(effects
 				(font
@@ -8407,7 +8407,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
 			(at 109.855 172.085 0)
 			(effects
 				(font
@@ -8483,7 +8483,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 151.765 157.48 0)
 			(effects
 				(font
@@ -8677,7 +8677,7 @@
 				)
 			)
 		)
-		(property "Value" "MC74VHC1GT66"
+		(property "Value" "SN74LVC1G66DCKR"
 			(at 151.13 171.45 0)
 			(effects
 				(font
@@ -8685,7 +8685,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
 			(at 151.765 172.085 0)
 			(effects
 				(font
@@ -8764,7 +8764,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 235.585 144.145 0)
 			(effects
 				(font
@@ -8898,7 +8898,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 64.77 165.1 0)
 			(effects
 				(font
@@ -8958,7 +8958,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "TC2117-3.3VDBTR"
 			(at 222.25 138.43 0)
 			(effects
 				(font
@@ -8966,7 +8966,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
 			(at 222.25 139.7 0)
 			(effects
 				(font
@@ -9030,7 +9030,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Q_NMOS_GSD"
+		(property "Value" "BSS138"
 			(at 248.285 99.6949 0)
 			(effects
 				(font
@@ -9039,7 +9039,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 247.65 95.885 0)
 			(effects
 				(font
@@ -9110,7 +9110,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:Texas_HTSSOP-56_6.1x9.7mm_P0.65mm"
 			(at 146.05 137.16 0)
 			(effects
 				(font
@@ -9398,7 +9398,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PMEG6020ER"
+		(property "Value" "DSS210"
 			(at 183.896 71.374 0)
 			(effects
 				(font
@@ -9407,7 +9407,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W"
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
 			(at 182.245 75.946 0)
 			(effects
 				(font
@@ -10274,7 +10274,7 @@
 				)
 			)
 		)
-		(property "Value" "MC74VHC1GT66"
+		(property "Value" "SN74LVC1G66DCKR"
 			(at 63.5 171.45 0)
 			(effects
 				(font
@@ -10282,7 +10282,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
 			(at 64.135 172.085 0)
 			(effects
 				(font
@@ -10697,7 +10697,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 151.765 154.305 0)
 			(effects
 				(font
@@ -10897,7 +10897,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 109.855 154.305 0)
 			(effects
 				(font
@@ -10967,7 +10967,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 201.295 144.145 0)
 			(effects
 				(font
@@ -11101,7 +11101,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 64.135 157.48 0)
 			(effects
 				(font
@@ -11304,7 +11304,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 110.49 165.1 0)
 			(effects
 				(font
