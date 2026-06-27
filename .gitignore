@@ -8,11 +8,13 @@
 *.kicad_pcb-bak
 *.sch-bak
 *~
-_autosave-*
+*_autosave-*
 *.tmp
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
+
+.DS_Store
 
 # Netlist files (exported from Eeschema)
 *.net
@@ -20,3 +22,7 @@ fp-info-cache
 # Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
+
+design/SBS_hw-backups/*
+
+

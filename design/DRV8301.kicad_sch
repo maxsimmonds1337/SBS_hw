@@ -8382,7 +8382,7 @@
 		)
 	)
 	(symbol
-		(lib_id "74xGxx:74LVC1G66")
+		(lib_id "Analog_Switch:MC74VHC1GT66")
 		(at 118.745 174.625 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8399,7 +8399,7 @@
 				)
 			)
 		)
-		(property "Value" "SN74LVC1G66DCKR"
+		(property "Value" "MC74VHC1GT66"
 			(at 109.22 171.45 0)
 			(effects
 				(font
@@ -8407,7 +8407,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
+		(property "Footprint" ""
 			(at 109.855 172.085 0)
 			(effects
 				(font
@@ -8660,7 +8660,7 @@
 		)
 	)
 	(symbol
-		(lib_id "74xGxx:74LVC1G66")
+		(lib_id "Analog_Switch:MC74VHC1GT66")
 		(at 160.655 174.625 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8677,7 +8677,7 @@
 				)
 			)
 		)
-		(property "Value" "SN74LVC1G66DCKR"
+		(property "Value" "MC74VHC1GT66"
 			(at 151.13 171.45 0)
 			(effects
 				(font
@@ -8685,7 +8685,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
+		(property "Footprint" ""
 			(at 151.765 172.085 0)
 			(effects
 				(font
@@ -10257,7 +10257,7 @@
 		)
 	)
 	(symbol
-		(lib_id "74xGxx:74LVC1G66")
+		(lib_id "Analog_Switch:MC74VHC1GT66")
 		(at 73.025 174.625 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10274,7 +10274,7 @@
 				)
 			)
 		)
-		(property "Value" "SN74LVC1G66DCKR"
+		(property "Value" "MC74VHC1GT66"
 			(at 63.5 171.45 0)
 			(effects
 				(font
@@ -10282,7 +10282,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
+		(property "Footprint" ""
 			(at 64.135 172.085 0)
 			(effects
 				(font
