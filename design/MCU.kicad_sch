@@ -4924,7 +4924,7 @@
 				)
 			)
 		)
-		(property "Value" "Crystal_GND24"
+		(property "Value" "8MHz"
 			(at 116.84 86.106 90)
 			(effects
 				(font
@@ -4932,7 +4932,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
 			(at 104.14 88.265 0)
 			(effects
 				(font
