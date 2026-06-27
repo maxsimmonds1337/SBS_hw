@@ -6698,7 +6698,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 203.835 132.08 0)
 			(effects
 				(font
@@ -6766,7 +6766,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_USB:USB_Micro-B_Molex_105017-0001"
 			(at 84.455 33.02 0)
 			(effects
 				(font
@@ -6910,7 +6910,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_PH_S3B-PH-K_1x03_P2.00mm_Horizontal"
 			(at 97.79 101.6 0)
 			(effects
 				(font
@@ -7116,7 +7116,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_PH_S6B-PH-K_1x06_P2.00mm_Horizontal"
 			(at 25.4 63.5 0)
 			(effects
 				(font
@@ -7198,7 +7198,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 99.695 184.785 0)
 			(effects
 				(font
@@ -7458,7 +7458,7 @@
 				)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "1N5819WS"
 			(at 50.4825 88.9 0)
 			(effects
 				(font
@@ -7466,7 +7466,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 50.8 92.71 0)
 			(effects
 				(font
@@ -7933,7 +7933,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
 			(at 97.79 83.82 0)
 			(effects
 				(font
@@ -8011,7 +8011,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "LED_GREEN"
 			(at 188.595 144.145 0)
 			(effects
 				(font
@@ -8019,7 +8019,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 192.405 141.605 0)
 			(effects
 				(font
@@ -8095,7 +8095,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical"
 			(at 97.79 115.57 0)
 			(effects
 				(font
@@ -8164,7 +8164,7 @@
 				)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "1N5819WS"
 			(at 50.4825 97.79 0)
 			(effects
 				(font
@@ -8172,7 +8172,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 50.8 101.6 0)
 			(effects
 				(font
@@ -8434,7 +8434,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "LED_BLUE"
 			(at 189.23 130.175 0)
 			(effects
 				(font
@@ -8442,7 +8442,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 192.405 132.08 0)
 			(effects
 				(font
@@ -8991,7 +8991,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 203.835 141.605 0)
 			(effects
 				(font
@@ -9059,7 +9059,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 192.405 111.125 0)
 			(effects
 				(font
@@ -9194,7 +9194,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 192.405 107.315 0)
 			(effects
 				(font
@@ -10122,7 +10122,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "1N5819WS"
 			(at 64.77 107.6324 90)
 			(effects
 				(font
@@ -10131,7 +10131,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 62.23 106.68 0)
 			(effects
 				(font
@@ -10265,7 +10265,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal"
 			(at 97.79 48.26 0)
 			(effects
 				(font
@@ -10332,7 +10332,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Zener"
+		(property "Value" "BZX84C3V6"
 			(at 26.67 114.2999 90)
 			(effects
 				(font
@@ -10341,7 +10341,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOT-23"
 			(at 24.13 113.03 0)
 			(effects
 				(font
@@ -10401,7 +10401,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "LED_RED"
 			(at 188.595 138.43 0)
 			(effects
 				(font
@@ -10409,7 +10409,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 192.405 137.16 0)
 			(effects
 				(font
@@ -10998,7 +10998,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 203.835 137.16 0)
 			(effects
 				(font
@@ -11266,7 +11266,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_SilkscreenOpenMarker_PadSize0.7x1.3mm"
 			(at 40.005 31.115 0)
 			(effects
 				(font
