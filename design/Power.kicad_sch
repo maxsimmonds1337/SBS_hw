@@ -1518,7 +1518,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.infineon.com/dgdl/irf7748l1pbf.pdf?fileId=5546d462533600a40153560434c11c9e"
+			(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535675aee92289"
 				(at 5.08 -3.81 0)
 				(effects
 					(font
@@ -1528,7 +1528,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "104A Id, 60V Vds, 2.2mOhm Rds, N-Channel MOSFET, DirectFET L6"
+			(property "Description" "104A Id, 150V Vds, 10mOhm Rds, N-Channel MOSFET, D2PAK — replaced from IRF7749L1TRPBF (40V) for 14S 58.8V bus"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4856,7 +4856,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRF7749L1TRPBF"
+		(property "Value" "IRFS4115TRLPBF"
 			(at 233.045 92.71 90)
 			(effects
 				(font
@@ -4865,7 +4865,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DirectFET:DirectFET_L8"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
 			(at 232.41 80.01 0)
 			(effects
 				(font
@@ -4876,7 +4876,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.infineon.com/dgdl/irf7748l1pbf.pdf?fileId=5546d462533600a40153560434c11c9e"
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535675aee92289"
 			(at 232.41 81.915 0)
 			(effects
 				(font
@@ -4886,7 +4886,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "104A Id, 60V Vds, 2.2mOhm Rds, N-Channel MOSFET, DirectFET L6"
+		(property "Description" "104A Id, 150V Vds, 10mOhm Rds, N-Channel MOSFET, D2PAK — replaced from IRF7749L1TRPBF (40V) for 14S 58.8V bus"
 			(at 227.33 78.105 0)
 			(effects
 				(font
@@ -5133,7 +5133,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRF7749L1TRPBF"
+		(property "Value" "IRFS4115TRLPBF"
 			(at 158.75 92.075 90)
 			(effects
 				(font
@@ -5142,7 +5142,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DirectFET:DirectFET_L8"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
 			(at 158.115 79.375 0)
 			(effects
 				(font
@@ -5153,7 +5153,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.infineon.com/dgdl/irf7748l1pbf.pdf?fileId=5546d462533600a40153560434c11c9e"
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535675aee92289"
 			(at 158.115 81.28 0)
 			(effects
 				(font
@@ -5163,7 +5163,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "104A Id, 60V Vds, 2.2mOhm Rds, N-Channel MOSFET, DirectFET L6"
+		(property "Description" "104A Id, 150V Vds, 10mOhm Rds, N-Channel MOSFET, D2PAK — replaced from IRF7749L1TRPBF (40V) for 14S 58.8V bus"
 			(at 153.035 77.47 0)
 			(effects
 				(font
@@ -5418,7 +5418,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 215.265 120.65 0)
 			(effects
 				(font
@@ -5546,7 +5546,7 @@
 				)
 			)
 		)
-		(property "Value" "MC74VHC1GT66"
+		(property "Value" "SN74LVC1G66DCKR"
 			(at 71.12 130.175 0)
 			(effects
 				(font
@@ -5554,7 +5554,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
 			(at 71.755 130.81 0)
 			(effects
 				(font
@@ -5630,7 +5630,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 216.535 143.51 0)
 			(effects
 				(font
@@ -5690,7 +5690,7 @@
 				)
 			)
 		)
-		(property "Value" "MC74VHC1GT66"
+		(property "Value" "SN74LVC1G66DCKR"
 			(at 196.215 130.81 0)
 			(effects
 				(font
@@ -5698,7 +5698,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
 			(at 196.85 131.445 0)
 			(effects
 				(font
@@ -5777,7 +5777,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 25.4 168.91 0)
 			(effects
 				(font
@@ -5917,7 +5917,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 259.08 25.4 0)
 			(effects
 				(font
@@ -6114,7 +6114,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_2010_5025Metric"
 			(at 52.07 65.405 0)
 			(effects
 				(font
@@ -6440,7 +6440,7 @@
 				)
 			)
 		)
-		(property "Value" "MC74VHC1GT66"
+		(property "Value" "SN74LVC1G66DCKR"
 			(at 134.62 130.81 0)
 			(effects
 				(font
@@ -6448,7 +6448,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
 			(at 135.255 131.445 0)
 			(effects
 				(font
@@ -6524,7 +6524,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 90.17 120.015 0)
 			(effects
 				(font
@@ -6591,7 +6591,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 91.44 142.875 0)
 			(effects
 				(font
@@ -6726,7 +6726,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 33.02 62.865 0)
 			(effects
 				(font
@@ -6783,7 +6783,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRF7749L1TRPBF"
+		(property "Value" "IRFS4115TRLPBF"
 			(at 83.185 91.44 90)
 			(effects
 				(font
@@ -6792,7 +6792,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DirectFET:DirectFET_L8"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
 			(at 82.55 78.74 0)
 			(effects
 				(font
@@ -6803,7 +6803,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.infineon.com/dgdl/irf7748l1pbf.pdf?fileId=5546d462533600a40153560434c11c9e"
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535675aee92289"
 			(at 82.55 80.645 0)
 			(effects
 				(font
@@ -6813,7 +6813,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "104A Id, 60V Vds, 2.2mOhm Rds, N-Channel MOSFET, DirectFET L6"
+		(property "Description" "104A Id, 150V Vds, 10mOhm Rds, N-Channel MOSFET, D2PAK — replaced from IRF7749L1TRPBF (40V) for 14S 58.8V bus"
 			(at 77.47 76.835 0)
 			(effects
 				(font
@@ -6865,7 +6865,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 86.995 141.605 0)
 			(effects
 				(font
@@ -6933,7 +6933,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_2010_5025Metric"
 			(at 127.635 66.04 0)
 			(effects
 				(font
@@ -7066,7 +7066,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 153.67 120.65 0)
 			(effects
 				(font
@@ -7200,7 +7200,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 108.585 63.5 0)
 			(effects
 				(font
@@ -7257,7 +7257,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRF7749L1TRPBF"
+		(property "Value" "IRFS4115TRLPBF"
 			(at 158.115 57.15 90)
 			(effects
 				(font
@@ -7266,7 +7266,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DirectFET:DirectFET_L8"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
 			(at 158.115 40.64 0)
 			(effects
 				(font
@@ -7277,7 +7277,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.infineon.com/dgdl/irf7748l1pbf.pdf?fileId=5546d462533600a40153560434c11c9e"
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535675aee92289"
 			(at 158.115 42.545 0)
 			(effects
 				(font
@@ -7287,7 +7287,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "104A Id, 60V Vds, 2.2mOhm Rds, N-Channel MOSFET, DirectFET L6"
+		(property "Description" "104A Id, 150V Vds, 10mOhm Rds, N-Channel MOSFET, D2PAK — replaced from IRF7749L1TRPBF (40V) for 14S 58.8V bus"
 			(at 153.035 38.735 0)
 			(effects
 				(font
@@ -7476,7 +7476,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
 			(at 53.975 92.075 0)
 			(effects
 				(font
@@ -7554,7 +7554,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRF7749L1TRPBF"
+		(property "Value" "IRFS4115TRLPBF"
 			(at 82.55 56.515 90)
 			(effects
 				(font
@@ -7563,7 +7563,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DirectFET:DirectFET_L8"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
 			(at 82.55 40.005 0)
 			(effects
 				(font
@@ -7574,7 +7574,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.infineon.com/dgdl/irf7748l1pbf.pdf?fileId=5546d462533600a40153560434c11c9e"
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535675aee92289"
 			(at 82.55 41.91 0)
 			(effects
 				(font
@@ -7584,7 +7584,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "104A Id, 60V Vds, 2.2mOhm Rds, N-Channel MOSFET, DirectFET L6"
+		(property "Description" "104A Id, 150V Vds, 10mOhm Rds, N-Channel MOSFET, D2PAK — replaced from IRF7749L1TRPBF (40V) for 14S 58.8V bus"
 			(at 77.47 38.1 0)
 			(effects
 				(font
@@ -7640,7 +7640,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 25.4 179.705 0)
 			(effects
 				(font
@@ -7710,7 +7710,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 255.905 107.95 0)
 			(effects
 				(font
@@ -7845,7 +7845,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_2010_5025Metric"
 			(at 201.93 66.675 0)
 			(effects
 				(font
@@ -7979,7 +7979,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 182.88 64.135 0)
 			(effects
 				(font
@@ -8319,7 +8319,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 154.94 143.51 0)
 			(effects
 				(font
@@ -8386,7 +8386,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 212.09 142.24 0)
 			(effects
 				(font
@@ -8521,7 +8521,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
 			(at 129.54 92.71 0)
 			(effects
 				(font
@@ -9080,7 +9080,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
 			(at 203.835 93.345 0)
 			(effects
 				(font
@@ -9233,7 +9233,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 16.51 180.34 0)
 			(effects
 				(font
@@ -9300,7 +9300,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 150.495 142.24 0)
 			(effects
 				(font
@@ -9426,7 +9426,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRF7749L1TRPBF"
+		(property "Value" "IRFS4115TRLPBF"
 			(at 232.41 57.785 90)
 			(effects
 				(font
@@ -9435,7 +9435,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DirectFET:DirectFET_L8"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
 			(at 232.41 41.275 0)
 			(effects
 				(font
@@ -9446,7 +9446,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.infineon.com/dgdl/irf7748l1pbf.pdf?fileId=5546d462533600a40153560434c11c9e"
+		(property "Datasheet" "https://www.infineon.com/dgdl/irfs4115pbf.pdf?fileId=5546d462533600a401535675aee92289"
 			(at 232.41 43.18 0)
 			(effects
 				(font
@@ -9456,7 +9456,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "104A Id, 60V Vds, 2.2mOhm Rds, N-Channel MOSFET, DirectFET L6"
+		(property "Description" "104A Id, 150V Vds, 10mOhm Rds, N-Channel MOSFET, D2PAK — replaced from IRF7749L1TRPBF (40V) for 14S 58.8V bus"
 			(at 227.33 39.37 0)
 			(effects
 				(font
