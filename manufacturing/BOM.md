@@ -61,7 +61,7 @@
 |---|---|---|---|---|---|---|
 | FB (ferrite bead) | FCM1608KF-601T05 — 600Ω @100MHz | **C133937** | 0603 | 1 | ~£0.004 | MCU VDD filter |
 | Y (crystal) | 8MHz 20pF ±10ppm crystal | **C5181477** (SOSET 3225 8M 20PF 10PPM) | 3225-4P | 1 | ~£0.04 | STM32 HSE clock. Load capacitor: 20pF; pair with 15pF load caps |
-| L? (inductor) | 22µH SMD inductor, ≥1A | Search LCSC "22uH 1A 0806 inductor" | 1008/0806 | 1 | ~£0.05 | DRV8301 internal buck converter output filter |
+| L? (inductor) | SMNR4020-22UH — 22µH ±20%, 1.05A Isat, 455mΩ DCR, SMD | **C135264** | 4×4×2mm (4020) | 1 | ~£0.04 | DRV8301 VBOOST buck filter. Footprint: Inductor_SMD:L_4040_Coilcraft_DO3316 |
 | C6 (bulk cap) | **100µF 100V** SMD electrolytic | Search LCSC "100µF 100V aluminum SMD" | D10×10mm | 1 | ~£0.15 | ⚠️ F3: replaces current 63V part. Must be ≥80V, prefer 100V. Size ~D10×10.5mm |
 
 ### Passives — Resistors (bulk, standard 0402/0603)
