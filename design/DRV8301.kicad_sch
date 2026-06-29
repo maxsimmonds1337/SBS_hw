@@ -6493,6 +6493,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C338088"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
@@ -6633,6 +6642,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C338088"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6766,6 +6784,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C14663"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -6835,6 +6862,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C23630"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -6902,6 +6938,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C23153"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -6967,6 +7012,15 @@
 					(reference "R27")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C4190"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -7370,6 +7424,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C4190"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Diode:SMAJ5.0A")
@@ -7438,6 +7501,15 @@
 					(reference "D10")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C87074"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -7574,6 +7646,15 @@
 					(reference "C27")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C21120"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -8119,6 +8200,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C21120"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -8322,6 +8412,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C23153"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_name "GND_2")
@@ -8466,6 +8565,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C113518"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -8533,6 +8641,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C4190"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -8598,6 +8715,15 @@
 					(reference "R21")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C22961"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -8742,6 +8868,15 @@
 					(reference "U7")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C113518"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -8948,6 +9083,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C14663"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Regulator_Linear:TC2117-3.3VDBTR")
@@ -9017,6 +9161,15 @@
 					(reference "U4")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C98655"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -9090,6 +9243,15 @@
 					(reference "Q1")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C112739"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -9322,6 +9484,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C98969"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9455,6 +9626,15 @@
 					(reference "D9")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C511868"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -9860,6 +10040,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C23630"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -9928,6 +10117,15 @@
 					(reference "C26")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C21122"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -10198,6 +10396,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C23630"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10339,6 +10546,15 @@
 					(reference "U5")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C113518"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -10547,6 +10763,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C23630"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_name "+5V_1")
@@ -10680,6 +10905,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25804"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -10745,6 +10979,15 @@
 					(reference "R30")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C23153"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -10880,6 +11123,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25804"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -10945,6 +11197,15 @@
 					(reference "R29")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C23153"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -11084,6 +11345,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C25810"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -11149,6 +11419,15 @@
 					(reference "R31")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C4190"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -11219,6 +11498,15 @@
 					(reference "C29")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C21120"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -11354,6 +11642,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C14663"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -11421,6 +11718,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C22978"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -11486,6 +11792,15 @@
 					(reference "R23")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C22809"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
@@ -11557,6 +11872,15 @@
 				)
 			)
 		)
+		(property "LCSC" "C1631"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -11625,6 +11949,15 @@
 					(reference "C31")
 					(unit 1)
 				)
+			)
+		)
+		(property "LCSC" "C23630"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 	)
