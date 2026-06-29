@@ -8,11 +8,10 @@ Status: `[OPEN]` / `[IN PROGRESS]` / `[RESOLVED]`
 
 ## Critical — Must Fix Before Layout
 
-### MC-001 MOSFET Footprint Change [IN PROGRESS]
-**All 6 MOSFETs (Q1, Q3-Q7) updated in schematic** to IRFS4115TRLPBF with `Package_TO_SOT_SMD:TO-263-2` footprint (2026-06-27). The symbol lib_id (`Transistor_FET:IRF7748L1`) remains — pin ordering (G=1, D=2, S=3) is compatible with TO-263-2.
+### MC-001 MOSFET Footprint Change [RESOLVED 2026-06-29]
+All 6 MOSFETs (Q2–Q7) updated to IRFS4115TRLPBF with `Package_TO_SOT_SMD:TO-263-2` footprint (2026-06-27). LCSC `C2692945` property added to all 6 instances (2026-06-29, commit `9ac1957`).
 
-**Still needed:**
-- Add LCSC property `C2692945` to each MOSFET instance in KiCad
+**Still needed (PCB layout phase):**
 - Verify pin 1/2/3 assignment in the KiCad footprint matches D2PAK physical pinout (Gate=1, Drain tab=2, Source=3)
 - PCB layout: each MOSFET needs ≥ 50 cm² copper pour on the tab pad. Tight half-bridge loop (< 1 cm²) to keep L_stray < 30 nH.
 
@@ -42,13 +41,13 @@ At 14S (58.8 V), the bus capacitors must be rated ≥ 100 V. Add to Power sheet 
 All component references are `C?`, `R?`, `Q?`, `U?`. Run **Tools → Annotate Schematic** in KiCad before generating BOM or sending for fab. Current netlist and BOM reflect unannotated refs (functionally correct but confusing).
 
 ### MC-006 TC2117 Value Field Blank [RESOLVED 2026-06-27]
-~~U1 Value = `~`.~~ Set Value=`TC2117-3.3VDBTR`, Footprint=`SOT-223-3_TabPin2`. LCSC C98655 still needs to be set as a property in KiCad.
+~~U1 Value = `~`.~~ Set Value=`TC2117-3.3VDBTR`, Footprint=`SOT-223-3_TabPin2`. LCSC C98655 added as property (2026-06-29, commit `9ac1957`).
 
 ### MC-007 Crystal No Frequency Value [RESOLVED 2026-06-27]
 ~~Y? on MCU sheet has no frequency in the Value field.~~ Fixed: Value set to `8MHz`, footprint set to `Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm` (matches LCSC C5181477 SOSET 8MHz 20pF 10ppm, per BOM.md).
 
 ### MC-008 Q2 (SENS_SUPPLY) No Part Assigned [RESOLVED 2026-06-27]
-~~Q2 had generic symbol with no part.~~ Set Value=`BSS138`, Footprint=`SOT-23`. LCSC C112739 still needs to be set as a property.
+~~Q2 had generic symbol with no part.~~ Set Value=`BSS138`, Footprint=`SOT-23`. LCSC C112739 added as property (2026-06-29, commit `9ac1957`).
 
 ### MC-009 DRV8301 PVDD Margin [OPEN]
 PVDD_max = 60V. At 14S (58.8V): 1.2V headroom.
