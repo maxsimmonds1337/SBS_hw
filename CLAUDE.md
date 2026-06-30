@@ -166,12 +166,12 @@ python3 ~/.claude/skills/kicad/scripts/analyze_schematic.py \
 ### Completed
 - All 6 schematic sheets: footprints assigned to all components
 - All 6 sheets: **136 LCSC part numbers** populated via UUID script (commit `9ac1957`)
-- MOSFET replaced: IRFS4115TRLPBF (150V D2PAK), LCSC C2692945, all 6 instances
+- MOSFET replaced: IRFS4115TRLPBF (150V D2PAK), LCSC C53417, all 6 instances
 - Bootstrap diode BST_A: DSS210 (100V), LCSC C511868
 - DRV8301 footprint: HTSSOP-56 (`Package_SO:Texas_HTSSOP-56_6.1x9.7mm_P0.65mm`)
 - BMI160 sub-sheet added and connected
 - Crystal: 8MHz, LCSC C5181477
-- BSS138 (Q1 level shifter): LCSC C112739
+- BSS138 (Q1 level shifter): LCSC C52895
 - TC2117-3.3VDBTR: LCSC C98655
 - Full design review completed: `schematic_review.md`
 - Component calcs written for: IRFS4115TRLPBF, DSS210, DRV8301, AD8418, BMI160, TC2117
@@ -237,10 +237,10 @@ Do not collate design_calcs.md prematurely — individual `.md` files are the wo
 | TCAN1051VDQ1 | C133788 | SOIC-8 |
 | TC2117-3.3VDBTR | C98655 | SOT-223 |
 | BMI160 | C94021 | LGA-12 |
-| IRFS4115TRLPBF | C2692945 | D2PAK |
+| IRFS4115TRLPBF | C53417 | D2PAK |
 | DSS210 (bootstrap) | C511868 | SOD-123F |
 | SN74LVC1G66DCKR | C113518 | SC-70-5 |
-| BSS138 | C112739 | SOT-23 |
+| BSS138 | C52895 | SOT-23 |
 | EYSGJNZWY (NRF51822) | C2151959 | module |
 | SMAJ5.0A TVS | C87074 | SMA |
 | FCM1608KF-601T (ferrite) | C133937 | 0603 |

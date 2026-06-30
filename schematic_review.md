@@ -1,15 +1,17 @@
 # Schematic Review — SBS_hw v1.0
-**Source:** Actual KiCad files + generated netlist (manufacturing/SBS_hw.net)  
-**Date:** 2026-06-25  
-**Method:** PDF review of all 5 sheets + netlist analysis for connectivity
+**Source:** Actual KiCad files + regenerated netlist (manufacturing/SBS_hw.net, regenerated 2026-06-27)  
+**Date:** Updated 2026-06-27 (original 2026-06-25)  
+**Method:** kicad-happy `analyze_schematic.py` on all 6 sheets + netlist + VESC 6 MK5 PDF cross-reference
 
 ---
 
 ## Summary
 
-The SBS_hw is a custom VESC 6 MK5 derivative. The schematic is a **work in progress** — the Power sheet is incomplete and several critical wiring errors exist across multiple sheets. The design cannot be sent for layout in its current state.
+The SBS_hw is a custom VESC 6 MK5 derivative. The user has completed all three phases on the Power sheet and added the BMI160 sub-sheet. The design is schematically near-complete but has several pre-layout blockers.
 
-**Status:** Not cleared for layout. See Critical Issues §3 below.
+**Status:** Not cleared for layout. MOSFET replacement (§3.1) and bootstrap diodes (§3.2) are hard blocks. Missing bus capacitors (§3.6) and DRV8301 footprint (§4.2) must also be resolved before fab.
+
+**VESC 6 MK5 alignment:** Closely follows the MK5 reference. Key additions are the footpad/CONN_SW latch circuit on the top sheet and the TCAN1051VDQ1 CAN transceiver upgrade. All control topology, SPI routing, current sense, and IMU connections match the MK5 reference.
 
 ---
 
@@ -113,7 +115,13 @@ Contains: Phase A half-bridge (Q1 high-side, Q3 low-side), gate resistors R10/R1
 | Max bus voltage | **58.8 V** (14S fully charged) |
 | Transient headroom needed | Vbus + L·di/dt — easily exceeds 40 V |
 
-**Action:** Replace all 6 MOSFETs with ≥80 V, low Rds(on) parts. BOM recommends IRFS4115TRLPBF (D2PAK, 150 V, 104 A, 10 mΩ, LCSC C2692945) — conservative choice with easy layout. The DirectFET_L8 footprint currently assigned must be changed to D2PAK (TO-263-2).
+**Action:** Replace all 6 MOSFETs. Minimum **100 V Vds** required (not 80 V) — a 50 nH loop inductance and 50 A turn-off at 50 ns gives a 50 V spike: 58.8 + 50 = 108.8 V, which exceeds any 80 V part.
+
+Recommended replacement: **IRFS4115TRLPBF** (D2PAK, 150 V, 104 A, 10 mΩ, LCSC C2692945). Full thermal and switching analysis in `manufacturing/parts/Infineon/IRFS4115TRLPBF/IRFS4115TRLPBF.md`.
+
+Footprint change required: `Package_DirectFET:DirectFET_L8` → `Package_TO_SOT_SMD:TO-263-2`. The PCB is not yet laid out, so this is acceptable. PCB copper pour ≥ 50 cm² per MOSFET is required for adequate heatsinking.
+
+> **Note:** KiCad is currently open. Make changes via the KiCad GUI to avoid conflicts.
 
 ---
 
@@ -127,13 +135,13 @@ Contains: Phase A half-bridge (Q1 high-side, Q3 low-side), gate resistors R10/R1
 
 Bootstrap diode must block the full bus voltage. PMEG6020ER will fail.
 
-**Action:** Replace 3× bootstrap diodes with DSS210 (SOD-123FL, 100 V, 2 A, LCSC C511868) or equivalent ≥100 V Schottky.
+**Action:** Replace the existing BST_A diode and add BST_B and BST_C (currently missing). Use DSS210 (SOD-123FL, 100 V, 2 A, LCSC C511868) for all three. Full analysis in `manufacturing/parts/Infineon/DSS210/DSS210.md`.
 
 ---
 
-### 3.3 Power Sheet Incomplete
+### 3.3 ~~Power Sheet Incomplete~~ — RESOLVED ✓
 
-Phases B and C do not exist. This is the primary blocker for PCB layout. See Sheet 5 review above for the exact list of what to add per phase.
+Phases B and C have been completed by the user (commit `3adaedc`). Phase B: Q4/Q5, R12/R14, R13, U6, C18/C19, U9. Phase C: Q6/Q7, R15/R17, R16, U7, C20/C21, U10. All three current-sense filter stages (U8/U9/U10 + RC networks) are present. Hierarchical labels GH_B/GL_B/SH_B and GH_C/GL_C/SH_C are connected.
 
 ---
 
@@ -147,19 +155,41 @@ Phases B and C do not exist. This is the primary blocker for PCB layout. See She
 
 ---
 
-### 3.5 CURR_FILTER_ON Routing Error
+### 3.5 ~~CURR_FILTER_ON Routing Error~~ — RETRACTED (was a false finding)
 
-MC74VHC1GT66 switches (U2/U3/U4) control the phase voltage sense filter. Their ON_OFF pins currently connect to `PC13` (`SENS_FILTERED` net). The correct signal is `CURR_FILTER_ON` from `PD2`. These are different nets — the filter is never enabled by the MCU.
+Cross-referencing against the VESC 6 MK5 schematic confirms:
+- **DRV8301 sheet switches (U2/U3/U4)** control the *phase voltage sense* filter → correctly driven by `SENS_FILTERED` (PC13) ✓
+- **Power sheet switches (U8/U9/U10)** control the *current sense* filter → correctly driven by `CURR_FILTER_ON` (PD2) ✓
 
-**Action:** In DRV8301.kicad_sch, change the net on U2/U3/U4 ON_OFF pins from `SENS_FILTERED`/`PC13` to `CURR_FILTER_ON`. Verify `PD2` on the MCU sheet drives this net.
+These are two distinct filter circuits with two separate MCU control signals. The original finding confused them. No wiring change required.
+
+### 3.6 Missing SUPPLY Bus Electrolytic Capacitors — MUST ADD
+
+**VESC 6 MK5 reference has 680 µF × 2 (1.36 mF total) of 63 V electrolytic capacitors on the SUPPLY bus.** The SBS_hw has only 4.7 µF × 2 per phase (9.4 µF per phase, 28.2 µF total) of 100 V MLCCs plus 100 µF on PVDD.
+
+MLCCs provide excellent high-frequency decoupling but negligible low-frequency energy storage. Without bulk electrolytics, large transient motor currents (heavy torque, regenerative braking) cause significant bus voltage droop or spikes that stress all bus-connected components including the DRV8301 (PVDD_max = 60 V).
+
+**Action:** Add 2× 470 µF (min) or 680 µF 100 V electrolytic capacitors across the SUPPLY rail, placed at or near the main power connector. Suggested part: EEEHB2A471P (Panasonic, 470 µF, 100 V, 12.5 mm dia, LCSC C131403) or similar 100 V electrolytic. Can be added to the Power sheet or top-level sheet.
+
+> The SBS_hw targets 14S (58.8 V), so the VESC 6 MK5's 63 V electrolytics are **not** suitable here. Use 100 V rated parts.
+
+### 3.7 DRV8301 PVDD Headroom — Monitor
+
+DRV8301 PVDD absolute max = 62 V. At 14S (4.2 V/cell) the battery is 58.8 V, leaving only **3.2 V** of margin (62 − 58.8 = 3.2 V, or 5.4%).
+
+Any regenerative braking pulse, inductive spike, or charging overvoltage can push PVDD above 62 V. Mitigation:
+- Add the 470 µF+ bus electrolytic (§3.6) — reduces voltage spikes substantially
+- Add a 60 V TVS (e.g. SMAJ60CA, bidirectional) at the SUPPLY bus input as an overvoltage clamp
 
 ---
 
 ## Non-Critical Issues
 
-### 4.1 BMI160 Missing
+### 4.1 ~~BMI160 Missing~~ — RESOLVED ✓
 
-BMI160 is required for the VESC Balance App. Must be added to a sheet (new sub-sheet or directly on MCU sheet). Connections: SDA→PB7, SCL→PB6, INT1→MCU GPIO, CSB→VCC (I2C mode), 2.2 kΩ pull-ups on SDA/SCL. Supply decoupling: 100 nF + 10 µF on VDDIO.
+BMI160 (U11) has been added as a sub-sheet `BMI160.kicad_sch` (commit `3adaedc`). Footprint: `Package_LGA:Bosch_LGA-14_3x2.5mm_P0.5mm`. Connections match VESC 6 MK5 reference: CSB→+3.3V (I2C mode), VDDIO/VDD→+3.3V, SCx→PA15, SDx→SDA net (PB2).
+
+**Verify:** 2.2 kΩ I2C pull-ups on SDA and SCL lines are present in BMI160.kicad_sch (R5 and R38 in the MK5 reference). Supply decoupling (100 nF + 2.2 µF) present. See `manufacturing/parts/Bosch/BMI160/BMI160.md`.
 
 ### 4.2 DRV8301 Footprint
 
@@ -186,12 +216,44 @@ All component references are `C?`, `R?`, `U?`, etc. — schematic is unannotated
 ## Items Verified ✓
 
 - STM32F405RGTx LQFP-64 ✓
-- SPI3 routed to DRV8301 (PC10/PB4/PB5 area) ✓ (net naming needs cleanup)
-- VCAP_1/VCAP_2 = 2.2 µF ✓
+- SPI3 routed to DRV8301 (PC10/PB4/PB5 area) ✓ (net naming note: SPI3_MOSI/MISO labels may be swapped — benign if VESC firmware matches)
+- VCAP_1/VCAP_2 = 2.2 µF ✓ (PP-001 analyzer false positive — these are internal LDO caps, GND is the correct other terminal)
 - CAN transceiver TCAN1051VDQ1 wired correctly ✓
 - NRF51822 EYSGJNZWY: single instance, correct module ✓
-- AD8418 gain = 20 V/V, shunt 0.5 mΩ → 330 A full-scale, adequate resolution ✓
-- Gate resistors 4.7 Ω on Phase A ✓
-- 100 nF bypass cap C7 on Phase A ✓
+- AD8418 gain = 20 V/V, shunt 0.5 mΩ → 330 A full-scale, adequate resolution ✓ (see `manufacturing/parts/Analog_Devices/AD8418ARMZ/AD8418ARMZ.md`)
+- Gate resistors 4.7 Ω on all 3 phases ✓ (R10/R11, R12/R14, R15/R17)
+- Shunt resistors 0.5 mΩ on all 3 phases ✓ (R9/R13/R16)
+- Bulk decoupling caps 4.7 µF 100 V per phase ✓ (CGA6M3X7S2A475KT0Y3S, 2 per phase)
 - CONN_SW 1 kΩ PTC resistors for footpad detection ✓
-- TC2117 LDO for 3.3 V ✓ (value field needs populating)
+- TC2117 LDO for 3.3 V ✓ (value field still blank — fix in KiCad: set Value = `TC2117-3.3VDBTR`)
+- Power sheet phases B and C completed ✓
+- BMI160 sub-sheet added, connections match VESC 6 MK5 ✓
+- SENS_FILTERED (PC13) → U2/U3/U4 phase voltage sense filter switches ✓ (confirmed correct vs MK5)
+- CURR_FILTER_ON (PD2) → U8/U9/U10 current sense filter switches ✓
+
+## Analyzer False Positives (VM-001 domain crossing)
+
+The analyzer flagged multiple 5V/3.3V domain crossings. These are false positives:
+- STM32F405 GPIOs are 5V-tolerant ✓
+- CURRENT_1/2/3, VOLTAGE_1/2/3: analog signals within 0–3.3V range ✓
+- PA15 (JTDI/SCL): configured as GPIO output in VESC firmware ✓
+- SDA: 3.3V I2C ✓
+- SH_A/SH_B/SH_C: phase sense divider outputs — result is 0–3.3V at MCU pin ✓
+
+The PP-001 AVDD finding (STM32 AVDD "no DC path") should be verified: AVDD should connect to filtered +3.3V (via ferrite bead FB?). Check MCU.kicad_sch that AVDD (pin 13) is connected to VDD through FB or directly.
+
+## VESC 6 MK5 Comparison Summary
+
+| Aspect | VESC 6 MK5 | SBS_hw | Notes |
+|--------|-----------|--------|-------|
+| MCU | STM32F405 LQFP-64 | STM32F405 LQFP-64 | Identical |
+| Gate driver | DRV8301 | DRV8301 | Identical |
+| MOSFETs | IRF7746 30V DirectFET | IRF7749 40V DirectFET | Both too low for 14S — **must replace** |
+| Shunt | 0.5 mΩ × 3 | 0.5 mΩ × 3 | Identical |
+| Current sense | AD8418 × 3 | AD8418 × 3 | Identical |
+| IMU | BMI160 (PA15/PB2) | BMI160 (PA15/PB2) | Identical |
+| BLE | NRF51822 EYSGJNZWY | NRF51822 EYSGJNZWY | Identical |
+| CAN | TJA1051 (5V only) | TCAN1051VDQ1 (5V+3.3V I/O) | SBS_hw improved |
+| Bus caps | 680 µF × 2 (electrolytic) | 4.7 µF × 6 (MLCC only) | **SBS_hw missing bulk storage** |
+| Bootstrap diodes | ~20V (same issue) | 20V (1 of 3) | Both need 100V parts |
+| Footpad/CONN_SW | Not present | 1kΩ PTC × 2, latch circuit | SBS_hw addition for Onewheel |

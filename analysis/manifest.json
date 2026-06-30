@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "project": "SBS_hw.kicad_pro",
+  "current": "2026-06-27_1636",
+  "runs": {
+    "2026-06-27_1636": {
+      "source_hashes": {
+        "SBS_hw.kicad_sch": "sha256:c01b7f0afb6c9d1b7b6b086c631eaa3500f61569e42699152fe757266e22bfc8"
+      },
+      "outputs": {
+        "schematic": "schematic.json"
+      },
+      "scripts": {
+        "schematic": "analyze_schematic.py SBS_hw.kicad_sch"
+      },
+      "generated": "2026-06-27T16:36:06+03:00",
+      "pinned": false
+    }
+  }
+}
